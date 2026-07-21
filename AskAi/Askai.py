@@ -1,5 +1,6 @@
 import requests
 import os
+import streamlit as st
 
 try:
     from dotenv import load_dotenv
@@ -9,7 +10,9 @@ except Exception:
 if load_dotenv is not None:
     load_dotenv()
 
-API_KEY = os.getenv("Api_key")
+API_KEY = st.secrets["OpenRouter_Api_Key"]
+
+# API_KEY = os.getenv("Api_key")
 
 
 def askai(**kwargs):

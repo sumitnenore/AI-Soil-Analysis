@@ -8,7 +8,7 @@ import os
 
 try:
     from tensorflow.keras import models 
-except Exception:
+except Exception: 
     models = None
 
 model = None
